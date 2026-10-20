@@ -41,6 +41,7 @@ jobs:
           mkdir -p device/vivo
           cp -r /device_tree device/vivo/PD1818HF_EX
           rm -rf device/vivo/PD1818HF_EX/.git
+          find device/vivo/PD1818HF_EX -name Android.bp -delete
           export ALLOW_MISSING_DEPENDENCIES=true
           source build/envsetup.sh
           lunch omni_PD1818HF_EX-eng
